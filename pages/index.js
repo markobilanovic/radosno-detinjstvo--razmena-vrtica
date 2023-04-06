@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Router from 'next/router'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -43,8 +44,8 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
       <nav>
-        <a href='/'>Unos</a>
-        <a href='/rezultati'>Rezultati</a>
+        <Link href='/'>Unos</Link>
+        <Link href='/rezultati'>Rezultati</Link>
       </nav>
 
 

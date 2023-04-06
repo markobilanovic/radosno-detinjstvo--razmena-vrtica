@@ -49,8 +49,8 @@ export default function Home() {
         </Head>
         <main className={styles.main}>
         <nav>
-          <a href='/'>Unos</a>
-          <a href='/rezultati'>Rezultati</a>
+        <Link href='/'>Unos</Link>
+        <Link href='/rezultati'>Rezultati</Link>
         </nav>
           <div>
             <h1>Radosno detinjstvo - razmena vrtica</h1>
