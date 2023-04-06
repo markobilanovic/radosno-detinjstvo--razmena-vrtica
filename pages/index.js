@@ -51,6 +51,10 @@ export default function Home() {
 
       <h1>Radosno detinjstvo - razmena vrtica</h1>
 
+      <p>Unesite podatke o detetu samo jednom, posle na stranici <Link href='/rezultati'>Rezultati</Link> mozete da vidite da li ima parova za rotiranje.</p>
+      <br/>
+      <br/>
+
       <form
         id="form"
         // action="/api/hello"
@@ -58,24 +62,18 @@ export default function Home() {
         // method="post"
       >
         <div id="mainGrid">
-          <h3>Dete je godiste</h3>
+          <h3>Dete od septembra ide u grupu</h3>
           <select id="godiste" required>
-                <option value="2021">2021</option>
-                <option value="2020">2020</option>
-                <option value="2019">2019</option>
-                <option value="2018">2018</option>
-                <option value="2017">2017</option>
-                <option value="2016">2016</option>
+                <option value="2022">mladja jaslena</option>
+                <option value="2021">starija jaslena</option>
+                <option value="2020">mladja</option>
+                <option value="2019">srednja</option>
+                <option value="2018">starija</option>
+                <option value="2017">najstarija</option>
             </select>
 
-          <h3>Ide u vrtic</h3>
-          <select id="trenutniVrtic"
-          
-                  // value={trenutniVrtic}
-                  // onChange={(e) => {
-                  //   setTrenutniVrtic(e.target.value);
-                  // }}
-                  required>
+          <h3>Trenutno ide u vrtic</h3>
+          <select id="trenutniVrtic" required>
                 <option value="Палчица">Бранимира Ћосића 40 - Палчица</option>
                 <option value="Чуперак">Саве Ковачевића 7 - Чуперак </option>
                 <option value="Звончица">Саве Ковачевића 14 - Звончица</option>
@@ -170,9 +168,8 @@ export default function Home() {
           </select>
 
           <div>
-            <h3>Zelim vrtic</h3>
-            <p>Ukoliko ste za racunarom, drzite CTRL dugme na tastaturi za biranje vise elemenata</p>
-            <p>Ukoliko ste za mobilnim uredjajem samo klikniti na deo ispod ovog teksta i pojavice vam se lista za biranje</p>
+            <h3>Zelimo da promenimo za vrtic</h3>
+            <p>Ukoliko ste za racunarom,<br/>drzite CTRL dugme na tastaturi za biranje vise vrtica</p>
           </div>
           <select id="zeljeniVrtici" multiple required>
                 <option value="Палчица">Бранимира Ћосића 40 - Палчица</option>

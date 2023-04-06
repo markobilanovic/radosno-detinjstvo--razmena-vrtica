@@ -9,7 +9,6 @@ export default function Home() {
   const [email, setEmail] = useState(router.query?.email ?? "");
   const [result, setResult] = useState([]);
 
-  console.log(router.query);
   useEffect(() => {
     if (router.query?.email) {
       getMatches(router.query?.email)
@@ -36,50 +35,54 @@ export default function Home() {
     }
     const response = await fetch(endpoint, options);
     const result = await response.json();
-    setResult(result ?? []);
+    if (result && result.length === 0) {
+      setResult(null);
+    } else {
+      setResult(result);
+    }
+    
   }
 
 
   return (
-      <>
-        <Head>
-          <title>Radosno detinjstvo - razmena vrtica - rezultati</title>
-          <meta name="description" content="Razmena vrtica u Radosnom Detinjstvu" />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <main className={styles.main}>
+    <>
+      <Head>
+        <title>Radosno detinjstvo - razmena vrtica - rezultati</title>
+        <meta name="description" content="Razmena vrtica u Radosnom Detinjstvu" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <main className={styles.main}>
         <nav>
-        <Link href='/'>Unos</Link>
-        <Link href='/rezultati'>Rezultati</Link>
+          <Link href='/'>Unos</Link>
+          <Link href='/rezultati'>Rezultati</Link>
         </nav>
-          <div>
-            <h1>Radosno detinjstvo - razmena vrtica</h1>
+        <div>
+          <h1>Radosno detinjstvo - razmena vrtica</h1>
 
-            <form
+          <form
             method="post"
             onSubmit={onSubmit}
-            >
-              <div className={"flex-row"}>
-                <h3>Email</h3>
-                <input type={"text"}
+          >
+            <div className={"flex-row"}>
+              <h3>Email</h3>
+              <input type={"text"}
                 name={"email"}
                 value={email}
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
-                />
-                <input type={"submit"} value="Prikazi rezultate"/>
-              </div>
-            </form>
-            <div>
+              />
+              <input type={"submit"} value="Prikazi rezultate" />
+            </div>
+          </form>
+          <div>
 
-              <br/>
-              <h3>Parovi za menjanje</h3>
-              {
-                result.length > 1 ?
+            <br />
+            <h3>Parovi za menjanje</h3>
+            {
+              result !== null ?
                 result.map((firstPerson, index) => {
-                  console.log(firstPerson);
                   let secondPerson;
                   if (index + 1 === result.length) {
                     secondPerson = result[0];
@@ -91,13 +94,12 @@ export default function Home() {
                   </div>
                 })
                 :
-                null
-              }
-            </div>
-
+                <div>Nema parova za menjanje, proverite kasnije</div>
+            }
           </div>
-        </main>
-      </>
+        </div>
+      </main>
+    </>
   );
 }
 

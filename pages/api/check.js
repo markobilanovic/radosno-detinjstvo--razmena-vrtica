@@ -25,7 +25,7 @@ export default async function handler(req, res) {
     const {email} = req.body;
     const person = await getPersonFromEmail(email);
     if (!person) {
-      res.status(200).json({result: "No data"});
+      res.status(200).json([]);
     }
     person.wanted = person.wanted.split(",");
     const allData = await getAll();
@@ -37,12 +37,7 @@ export default async function handler(req, res) {
     res.status(200).json(result);
 }
 
-
-let i = 0;
-
 function checkIfSomebodyHasWantedKindergarden(potentialPersons, person, traders) {
-  console.log(i);
-  i++;
   let final;
 
   const hit = potentialPersons.some((otherPerson) => {
@@ -60,7 +55,6 @@ function checkIfSomebodyHasWantedKindergarden(potentialPersons, person, traders)
           wanted: person.wanted,
         };
         const potentialPersonsCopy = potentialPersons.filter((p) => p.email !== otherPerson.email);
-        console.log("XXXXXXX", potentialPersonsCopy);
         const tradersPath = checkIfSomebodyHasWantedKindergarden(potentialPersonsCopy, hybridPerson, tradersCopy);
         if (tradersPath) {
           final = tradersPath;
