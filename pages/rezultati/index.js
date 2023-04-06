@@ -72,6 +72,7 @@ export default function Home() {
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
+                required
               />
               <input type={"submit"} value="Prikazi rezultate" />
             </div>
