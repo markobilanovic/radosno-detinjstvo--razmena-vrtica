@@ -93,6 +93,7 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+    
 }
 
 a {
@@ -104,4 +105,45 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+#zeljeniVrtici {
+  height: 500px;
+}
+
+#mainGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1rem;
+  /* column-gap: 0.5; */
+}
+
+.gridSpanTwoCells {
+  grid-column: span 2;
+}
+
+.flex-row {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  margin: 1rem;
+  font-size: 20px;
+}
+
+.submitButton {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  padding: 0.25em;
+}
+
+h1 { 
+  margin: 1em;
 }
