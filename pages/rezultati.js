@@ -35,7 +35,7 @@ export default function Home() {
     }
     const response = await fetch(endpoint, options);
     const result = await response.json();
-    if (result && result.length === 0) {
+    if (!result || result.length === 0) {
       setResult(null);
     } else {
       setResult(result);

@@ -38,7 +38,7 @@ export default function Home({ persons }) {
                 <h2>Lista svih zelja</h2>
 
                 <div style={{display: "flex", gap: "1rem", marginTop: "2rem", marginBottom: "2rem" }}>
-                    Sortiraj po grupi:
+                    Filtriraj po grupi:
                     <select value={godiste} onChange={(e) => setGodiste(e.target.value)}>
                         <option value="">Svi uzrasti</option>
                         <option value="2022">mladja jaslena</option>
