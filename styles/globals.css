@@ -111,11 +111,18 @@ a {
   height: 500px;
 }
 
-#mainGrid {
+.mainGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 1.5rem;
-  /* column-gap: 0.5; */
+}
+
+@media only screen and (max-width: 600px) {
+  .mainGrid {
+    display: flex;
+    flex-direction: column;
+    /* row-gap: 1rem; */
+  }
 }
 
 .gridSpanTwoCells {
@@ -144,8 +151,8 @@ nav {
   padding: 0.25em;
 }
 
-h1 { 
-  margin: 1em;
+h1, h2 { 
+  margin: 0.7rem;
 }
 
 a {

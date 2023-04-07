@@ -30,7 +30,9 @@ export default function Home() {
     });
 
     if (res.status == 201) {
-      Router.push(`/rezultati?email=${email}`)
+      Router.push(`/rezultati?email=${email}`);
+    } else if (res.status == 501) {
+      window.alert(`Greska: korisnik vec postoji`);
     }
   }
 
@@ -49,14 +51,15 @@ export default function Home() {
         </nav>
 
 
-        <h1>Radosno detinjstvo - razmena vrtica</h1>
+        <h1>Radosno detinjstvo</h1>
+        <h2>Razmena vrtica</h2>
 
         <p>Unesite podatke o detetu samo jednom, posle na stranici <Link href='/rezultati'>Rezultati</Link> mozete da vidite da li ima parova za rotiranje.</p>
         <br />
         <br />
 
         <form id="form" onSubmit={onSubmit}>
-          <div id="mainGrid">
+          <div className="mainGrid">
             <h3>Dete od septembra ide u grupu</h3>
             <select id="godiste" required>
               <option value="2022">mladja jaslena</option>

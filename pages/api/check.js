@@ -26,6 +26,7 @@ export default async function handler(req, res) {
     const person = await getPersonFromEmail(email);
     if (!person) {
       res.status(200).json([]);
+      return;
     }
     person.wanted = person.wanted.split(",");
     const allData = await getAll();

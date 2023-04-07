@@ -6,7 +6,11 @@ export default async function handler(req, res) {
   const { error } = await supabase.from('persons').insert(person);
 
   if (error) {
-    res.status(500).json({ error })
+    if (error.code === "23505") {
+      res.status(501).json({ error });
+    } else {
+      res.status(500).json({ error });
+    }
   } else {
     res.status(201).json({ ok: 'ok' })
   }
