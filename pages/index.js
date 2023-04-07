@@ -182,7 +182,6 @@ export default function Home() {
               <option value="Звончица">Саве Ковачевића 14 - Звончица</option>
               <option value="Венди">Браће Дроњак бб - Венди</option>
               <option value="Златна рибица">Мародићева 4а - Златна рибица</option>
-
               <option value="Зека">Будисава, Вука Караџића бб - Зека</option>
               <option value="Невен">Ковиљ, Војвођанских бригада 14 - Невен</option>
               <option value="Звончић">Каћ, Саве Малешева б.б. - Звончић</option>
@@ -190,7 +189,6 @@ export default function Home() {
               <option value="Бамби">Карађорђева 55 - Бамби</option>
               <option value="Вртић Срна">Радоја Домановића 24 - Вртић Срна</option>
               <option value="Детелина са 4 листа">Калмана Ланга 2 - Детелина са 4 листа</option>
-
               <option value="Пинокио">Бегеч, Краља Петра l, 45 - Пинокио</option>
               <option value="Шврћа">Јернеја Копитара 1 - Шврћа</option>
               <option value="Лане">Хероја Пинкија 25 - Лане</option>
@@ -198,8 +196,6 @@ export default function Home() {
               <option value="Биберче">Футог IV, Вој. Мишића бб - Биберче</option>
               <option value="Радосница">Адице, С. Шолаје бб - Радосница</option>
               <option value="Дунавски цвет">Ћирила и Методија 69 - Дунавски цвет</option>
-
-
               <option value="Коцкица">Карловачких ђака 31а Сремски Карловци - Коцкица</option>
               <option value="Чигра">Јоже Влаховића, бб - Чигра</option>
               <option value="Цврчак">Палмотићева 1 - Цврчак</option>
@@ -209,7 +205,6 @@ export default function Home() {
               <option value="Плави чуперак">Сремска Каменица III, С. Милетића бб - Плави чуперак</option>
               <option value="Изворчић">Стари Лединци, В. Караџића 63 - Изворчић</option>
               <option value="Чаробњак">Нови Лединци, Ђурђевданска 1 - Чаробњак</option>
-
               <option value="Бубамара">Ченејска 50 - Бубамара</option>
               <option value="Чаробни брег">Чаробни брег - Клисански пут 165</option>
               <option value="Видовдански звончић">Видовданско насеље - Видовдански звончић</option>
@@ -220,8 +215,6 @@ export default function Home() {
               <option value="Ђурђевак">Београдски кеј 37 - Ђурђевак</option>
               <option value="Плави зец">Милетићева 22 - Плави зец</option>
               <option value="Сигридруг">Алмашка 24 - Сигридруг</option>
-
-
               <option value="Различак">Народног Фронта 45 - Различак</option>
               <option value="Сунцокрет">Алексе Шантића 32 - Сунцокрет</option>
               <option value="Полетарац">Пушкинова 19 - Полетарац</option>
@@ -229,25 +222,18 @@ export default function Home() {
               <option value="Рода">Ветерник, Паунова - Рода</option>
               <option value="Камичак">Ветерник, Милана Тепића - Камичак</option>
               <option value="Новосађанче">Бановић Страхиње бб - Новосађанче</option>
-
-
               <option value="Звездани гај">Степановићево - Звездани гај</option>
               <option value="Лиенка">Кисач, Јана Амоса Коменског - Лиенка</option>
               <option value="Весели патуљци">Руменка, П. Шандора 25 - Весели патуљци</option>
               <option value="Плава Звезда">Сајлово 37 - Плава Звезда</option>
               <option value="Петар Пан">Јанка Чмелика 87 - Петар Пан</option>
               <option value="Цврчак и мрав">Трг Мајке Јевросиме 2 - Цврчак и мрав</option>
-
-
               <option value="Калимеро">Драгише Брашована 16 - Калимеро</option>
               <option value="Мрвица">Јиречекова 9 - Мрвица</option>
               <option value="Весели вртић">Др Илије Ђуричића 2 - Весели вртић</option>
               <option value="Чаролија">Соње Маринковић 1 - Чаролија</option>
               <option value="Весељко">Трг Коменског 9 - Весељко</option>
               <option value="Маслачак">Народног фронта 42 - Маслачак</option>
-
-
-
               <option value="Свитац">Стојана Новаковића бб - Свитац</option>
               <option value="Гуливер">Бате Бркића 1а - Гуливер</option>
               <option value="Бистричак I">Сељачких Буна 63 - Бистричак I</option>
@@ -255,7 +241,6 @@ export default function Home() {
               <option value="Звездан">Сељачких Буна 51 - Звездан</option>
               <option value="Бајка">Стевана Христића 15 - Бајка</option>
               <option value="Весели возић">Јанка Чмелика 110 - Весели возић</option>
-
               <option value="Вилењак">Радничка 20 - Вилењак</option>
               <option value="Меда">Радничка 47 - Меда</option>
               <option value="Златна греда">Златне Греде 6 - Златна греда</option>
@@ -267,7 +252,6 @@ export default function Home() {
               <option value="Сунце">Гагаринова 10 - Сунце</option>
               <option value="Споменак">Антона Урбана 2 - Споменак</option>
               <option value="Пужић">Вршачка 23 - Пужић</option>
-
             </select>
 
             <h3 >Email</h3>

@@ -24,6 +24,7 @@ export default function Home({ persons }) {
                 <meta name="description" content="Razmena vrtića u Radosnom Detinjstvu" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href="/favicon.ico" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
             </Head>
             <main className={styles.main}>
                 <nav>
@@ -49,7 +50,7 @@ export default function Home({ persons }) {
                         <option value="2017">najstarija</option>
                     </select>
                 </div>
-
+                <div style={{overflowX: "auto"}}>
                 <table>
                     <thead>
                         <tr>
@@ -83,6 +84,7 @@ export default function Home({ persons }) {
                         }
                     </tbody>
                 </table>
+                </div>
             </main>
         </>
     )

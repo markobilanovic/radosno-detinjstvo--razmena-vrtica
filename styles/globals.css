@@ -117,12 +117,26 @@ a {
   row-gap: 1.5rem;
 }
 
+nav {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+  margin: 1rem;
+  font-size: 20px;
+}
+
 @media only screen and (max-width: 600px) {
   .mainGrid {
     display: flex;
     flex-direction: column;
-    /* row-gap: 1rem; */
   }
+  nav {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  /* nav > a {
+    flex-basis: 100%;
+  } */
 }
 
 .gridSpanTwoCells {
@@ -136,13 +150,7 @@ a {
   gap: 1rem;
 }
 
-nav {
-  display: flex;
-  flex-direction: row;
-  gap: 5rem;
-  margin: 1rem;
-  font-size: 20px;
-}
+
 
 .submitButton {
   margin-left: auto;
@@ -171,4 +179,47 @@ td {
 li {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+@media screen and (max-width: 600px) {
+  /* Hide the table headers */
+  th {
+    display: none;
+  }
+  
+  /* Display the table rows as columns */
+  tr {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  /* Set the width of the table cells to 100% */
+  td {
+    display: block;
+    text-align: right;
+    border-bottom: none;
+    position: relative;
+  }
+  
+  /* Add pseudo elements to display table headers as labels */
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-right: 10px;
+    font-weight: bold;
+    text-align: left;
+  }
 }
