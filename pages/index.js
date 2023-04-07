@@ -16,6 +16,11 @@ export default function Home() {
     const zeljeniVrtici = Array.from(zeljeniVrticiSelectedOptions).map(({ value }) => value);
     const email = document.getElementById("email").value;
 
+    if (zeljeniVrtici.some((zeljeni) => zeljeni === trenutniVrtic)) {
+      window.alert(`Vrtić kojem dete pripada od septembra ne sme da se nalazi u listi zeljenih vrtića.`);
+      return;
+    }
+
     const res = await fetch("/api/insert", {
       method: "POST",
       body: JSON.stringify({
@@ -39,7 +44,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Radosno detinjstvo - razmena vrtica</title>
+        <title>Radosno detinjstvo - razmena vrtića</title>
         <meta name="description" content="Razmena vrtica u Radosnom Detinjstvu" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -48,11 +53,13 @@ export default function Home() {
         <nav>
           <Link href='/'>Unos</Link>
           <Link href='/rezultati'>Rezultati</Link>
+          <Link href='/liste'>Liste</Link>
+          <Link href='/brisanje'>Brisanje</Link>
         </nav>
 
 
         <h1>Radosno detinjstvo</h1>
-        <h2>Razmena vrtica</h2>
+        <h2>Razmena vrtića</h2>
 
         <p>Unesite podatke o detetu samo jednom, posle na stranici <Link href='/rezultati'>Rezultati</Link> mozete da vidite da li ima parova za rotiranje.</p>
         <br />
@@ -70,7 +77,7 @@ export default function Home() {
               <option value="2017">najstarija</option>
             </select>
 
-            <h3>Trenutno ide u vrtic</h3>
+            <h3>Od septembra treba da ide u vrtić</h3>
             <select id="trenutniVrtic" required>
               <option value="Палчица">Бранимира Ћосића 40 - Палчица</option>
               <option value="Чуперак">Саве Ковачевића 7 - Чуперак </option>

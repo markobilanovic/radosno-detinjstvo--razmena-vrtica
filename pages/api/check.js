@@ -18,6 +18,8 @@ async function getAll() {
     .from('persons')
     .select();
 
+    data.sort((a, b) => a.priority > b.priority ? -1 : 1);
+
     return data;
 }
 

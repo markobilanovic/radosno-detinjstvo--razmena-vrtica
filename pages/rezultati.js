@@ -40,15 +40,14 @@ export default function Home() {
     } else {
       setResult(result);
     }
-    
   }
 
 
   return (
     <>
       <Head>
-        <title>Radosno detinjstvo - razmena vrtica - rezultati</title>
-        <meta name="description" content="Razmena vrtica u Radosnom Detinjstvu" />
+        <title>Radosno detinjstvo - razmena vrtića - rezultati</title>
+        <meta name="description" content="Razmena vrtića u Radosnom Detinjstvu" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -56,9 +55,19 @@ export default function Home() {
         <nav>
           <Link href='/'>Unos</Link>
           <Link href='/rezultati'>Rezultati</Link>
+          <Link href='/liste'>Liste</Link>
+          <Link href='/brisanje'>Brisanje</Link>
         </nav>
         <div>
-          <h1>Radosno detinjstvo - razmena vrtica</h1>
+          <h1>Razmena vrtića</h1>
+          <div style={{ maxWidth: "500px" }} >
+            <ul>
+              <li>Unesite mail kojim ste se prijavili i ukoliko postoji izvodljiva rotacija da dobijete zeljeni vrtić bice vam prikazana.</li>
+              <li>Ako ste dobili rotaciju kojom biste mogli da dobijete zeljeni vrtić bice vam prikazani email-ovi od osoba koje treba da ucestvuju u razmeni, pa ih mozete kontaktirati.</li>
+              <li>Ako ste prolašli željeni vrtić, molim vas da odete na stranicu <Link href='/brisanje'>Brisanje</Link> i unesete vas email kako ne biste vise ulazili u rotaciju.</li>
+              <li>Srecno!</li>
+            </ul>
+          </div>
 
           <form
             method="post"
@@ -99,7 +108,7 @@ export default function Home() {
             }
           </div>
         </div>
-      </main>
+      </main >
     </>
   );
 }
