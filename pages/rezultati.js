@@ -3,8 +3,9 @@ import styles from '@/styles/Home.module.css';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+import { supabase } from '../lib/supabaseClient';
 
-export default function Home() {
+export default function Home({count}) {
   const router = useRouter();
   const [email, setEmail] = useState(router.query?.email ?? "");
   const [result, setResult] = useState([]);
@@ -69,6 +70,12 @@ export default function Home() {
             </ul>
           </div>
 
+          <br/>
+          <br/>
+          <div>
+            Trenutno ima {count} prijavljenih.
+          </div>
+
           <form
             method="post"
             onSubmit={onSubmit}
@@ -113,3 +120,11 @@ export default function Home() {
   );
 }
 
+export async function getServerSideProps(context) {
+
+  const { data, error } = await supabase.from('persons').select();
+
+  return {
+    props: { count: data.length }, // will be passed to the page component as props
+  }
+}
